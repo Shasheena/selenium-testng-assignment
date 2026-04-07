@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium Test Suite">
+
+    <!-- Suite-level parameter -->
+    <parameter name="browser" value="chrome"/>
+    <parameter name="baseURL" value="https://www.ebay.com"/>
+
+    <!-- ================= TEST 1 ================= -->
+    <test name="Valid Login Test Data 1">
+
+        <!-- Test-level parameters -->
+        <parameter name="username" value="testuser1@example.com"/>
+        <parameter name="password" value="Password123"/>
+
+        <classes>
+            <class name="question02.TestNGBasicsTest"/>
+            <class name="question02.TestExecutionControlTest"/>
+        </classes>
+
+    </test>
+
+    <!-- ================= TEST 2 ================= -->
+    <test name="Valid Login Test Data 2">
+
+        <!-- different credentials -->
+        <parameter name="username" value="testuser2@example.com"/>
+        <parameter name="password" value="Password456"/>
+
+        <classes>
+            <class name="question02.AssertionsTest"/>
+            <class name="question02.DataProviderTest"/>
+            <class name="question02.DependencyTest"/>
+        </classes>
+
+    </test>
+
+</suite>
